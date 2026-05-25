@@ -31,55 +31,49 @@ This dataset provides structured numerical features suitable for classification 
 
 #### Methodology
 What methods are you using to answer the question?
-The following steps were performed:
+This project utilizes a classification-based machine learning approach, as the objective is to predict whether a patient is likely to have diabetes or not. The outcome variable is binary in nature:
 
-Data Cleaning
-Identified invalid zero values in medical measurements.
-Replaced invalid entries with median values.
-Verified class distribution.
+· 0 = non-diabetic
 
-Exploratory Data Analysis (EDA)
-Examined feature distributions.
-Created visualizations to compare diabetic vs non-diabetic patients.
-Conducted correlation analysis to identify strong predictors.
+· 1 = Diabetic
 
-Feature Preparation
-Separated independent variables and target variable.
-Standardized numerical features.
-Split the dataset into training and testing sets.
+Therefore, the expected output of the selected models is a categorical prediction indicating diabetes risk status. In addition to the predicted class label, some models (such as Logistic Regression) also provide probability scores, which can be interpreted as the likelihood of a patient being diabetic.
 
-Baseline Model
-Implemented Logistic Regression as a baseline classification model.
-Evaluated model performance using accuracy and classification metrics.
+These probability estimates are valuable in healthcare settings because they allow practitioners to assess risk levels rather than relying solely on a binary decision.
 
-This approach provides both statistical understanding and predictive modeling capability.
+The learning approach used in this project is supervised learning, as the dataset includes labeled outcomes (diabetes diagnosis) that guide the training process. The models learn patterns from historical patient data and use these patterns to predict outcomes for new, unseen cases.
+
+The following supervised classification algorithms were implemented and compared:
+
+· Logistic Regression (baseline model)
+
+· Decision Tree
+
+· Random Forest
+
+· Support Vector Machine (SVM)
+
+These models were selected to compare linear and nonlinear decision boundaries, interpretability, and predictive performance.
+
+The primary goal of the predictive model is to accurately classify high-risk individuals while minimizing false negatives, as misclassifying diabetic patients could delay necessary medical intervention.
 
 #### Results
 What did your research find?
-The exploratory data analysis and baseline Logistic Regression model produced several important findings.
+After evaluating all four models using accuracy, classification reports, and confusion matrices, Logistic Regression was selected as the optimal model.
 
-First, the model achieved an overall accuracy of approximately 75%, indicating that patient demographic and clinical data can reasonably predict diabetes risk.
+Reasons for selection:
 
-From the classification results:
-The model performed stronger in identifying non-diabetic patients (higher precision and recall).
-It showed moderate performance in identifying diabetic patients, with lower recall. This suggests that some high-risk individuals were misclassified as non-diabetic.
-This is important because, in a healthcare context, failing to identify diabetic patients (false negatives) may have serious consequences.
+· Competitive accuracy performance
 
-Key Predictive Factors
+· Strong recall for diabetic class (medically critical)
 
-Based on the model coefficients, the most influential predictors of diabetes risk were:
-Glucose level (strongest positive predictor)
-BMI
-Age
-Diabetes Pedigree Function (family history)
-Number of pregnancies
+· Balanced precision and F1-score
 
-These variables significantly increase the likelihood of diabetes when their values are higher.
-Interestingly:
-Blood Pressure and Insulin showed negative coefficients in the model.
-Skin Thickness had only a small impact.
+· Lower misclassification of positive (diabetic) cases
 
-Overall, the research confirms that glucose level, body mass index, age, and family history are strong indicators of diabetes risk. The baseline model demonstrates meaningful predictive capability, though improvements may be needed to better detect high-risk patients.
+· High interpretability, which is essential in healthcare applications
+
+Although ensemble models performed competitively, Logistic Regression provided the best combination of performance, stability, and interpretability for this diabetes prediction problem.
 
 #### Next steps
 What suggestions do you have for next steps?
@@ -92,7 +86,9 @@ These next steps will strengthen the predictive accuracy and enhance the communi
 
 #### Outline of project
 
-- [Link to notebook 1](CapStone/Initial Report and Exploratory Data Analysis/Initial Report and Exploratory Data Analysis.ipynb)
+- [Link to notebook 1](CapStone/Final_CapStone/Final_capstone_project.ipynb)
+- [Link to Final Project Report] (CapStone/Final_CapStone/Diabetes Risk Prediction Using Machine Learning Final Report.docx)
+- [Link to Data files] (CapStone/Final_CapStone/Data)
 
 
 ##### Contact and Further Information
