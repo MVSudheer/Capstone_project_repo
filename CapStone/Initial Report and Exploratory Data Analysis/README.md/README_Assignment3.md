@@ -1,6 +1,6 @@
-### Project Title
+### Exploratory Analysis and Predictive Modeling for Diabetes Detection
 
-**Author**
+**Sudheer Manuri**
 
 #### Executive summary
 This project aims to predict whether a patient is at high risk of developing diabetes using demographic and clinical health indicators. Through exploratory data analysis and a baseline machine learning model, key risk factors were identified and evaluated for their predictive power. The findings demonstrate that structured patient health data can be used to support early detection efforts and assist healthcare providers in preventive decision-making.
