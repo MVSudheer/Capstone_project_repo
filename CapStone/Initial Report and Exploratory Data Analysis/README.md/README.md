@@ -92,9 +92,7 @@ These next steps will strengthen the predictive accuracy and enhance the communi
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [Link to notebook 1](CapStone/Initial Report and Exploratory Data Analysis/Initial Report and Exploratory Data Analysis.ipynb)
 
 
 ##### Contact and Further Information
